@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | Rocco DJ & Dancer</title>
+    <meta name="description" content="Rocco's story, experience, genres and career highlights.">
+    <link rel="icon" href="images/logo1.png">
+    <script>try { document.documentElement.classList.toggle('dark', (localStorage.theme || 'dark') === 'dark') } catch (e) { }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tw.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body data-page="about"
+    class="bg-[#f5f3ff] text-[#1a1240] dark:bg-ink dark:text-[#ece9ff] transition-colors duration-300 overflow-x-hidden">
+    <div id="cursor"></div>
+    <header
+        class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[#f5f3ff]/80 dark:bg-ink/80 border-b border-violet/20">
+        <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3"><img src="images/logo1.png" alt="Rocco logo"
+                    class="h-9 w-auto"><span class="font-display font-extrabold"></span></a>
+            <ul class="hidden md:flex items-center gap-8 text-sm font-bold">
+                <li><a data-nav="home" class="hover:text-violet" href="index.html">Home</a></li>
+                <li><a data-nav="about" class="hover:text-violet" href="about.html">About</a></li>
+                <li><a data-nav="performance" class="hover:text-violet" href="performance.html">Performance</a></li>
+                <li><a data-nav="events" class="hover:text-violet" href="events.html">Events</a></li>
+                <li><a data-nav="contact" class="hover:text-violet" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="flex items-center gap-2"><button id="theme" aria-label="Switch dark or light mode"
+                    class="w-10 h-10 rounded-full border border-violet/40 hover:bg-violet/10"><span
+                        id="themeIcon">☾</span></button>
+                <a href="contact.html" class="hidden sm:inline-block grad-btn text-sm px-5 py-2.5">Book Rocco</a>
+                <button id="burger" aria-label="Open menu"
+                    class="md:hidden w-10 h-10 rounded-full border border-violet/40">☰</button>
+            </div>
+        </nav>
+        <ul id="mobileMenu" class="hidden md:hidden px-5 pb-4 space-y-3 font-bold">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="performance.html">Performance</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <main class="relative z-10">
+        <section class="relative pt-36 pb-12 overflow-hidden">
+            <div class="blob w-80 h-80 bg-violet/30 -top-10 -left-10"></div>
+            <div class="blob w-72 h-72 bg-electric/30 top-10 right-0"></div>
+            <div class="relative max-w-6xl mx-auto px-5">
+                <h1 class="font-display font-extrabold text-4xl sm:text-6xl reveal"><span class="grad-text">About
+                        Rocco</span></h1>
+                <p class="mt-4 opacity-75 max-w-xl reveal">From dance floors to DJ booths.</p>
+            </div>
+        </section>
+        <section class="py-10">
+            <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-5 gap-10">
+                <div class="md:col-span-2 reveal">
+                    <div class="gw glow md:sticky md:top-24"><img src="images/r2.jpg" alt="Rocco portrait"
+                            class="g w-full aspect-[4/5] object-cover"></div>
+                </div>
+                <div class="md:col-span-3 space-y-10">
+                    <div class="reveal">
+                        <h2 class="font-display font-extrabold text-2xl">Biography</h2>
+                        <p class="mt-4 opacity-80 max-w-xl">Rocco found music through dance. Years of battles and stage
+                            shows taught him how a crowd breathes, and that is what he now brings behind the decks.
+                            <!-- Replace with Rocco's real biography --></p>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div class="card p-6 reveal">
+                            <h3 class="font-bold">DJ experience</h3>
+                            <p class="text-sm opacity-75 mt-2">Club nights, weddings, corporate events and festival
+                                stages, with sets built live from the crowd's energy.</p>
+                        </div>
+                        <div class="card p-6 reveal">
+                            <h3 class="font-bold">Dancer experience</h3>
+                            <p class="text-sm opacity-75 mt-2">Stage shows, choreographed openers and freestyle cyphers,
+                                solo or with a crew.</p>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <h2 class="font-display font-extrabold text-2xl">Genres and styles</h2>
+                        <div class="mt-4 flex flex-wrap gap-2"><span class="chip">House</span><span
+                                class="chip">EDM</span><span class="chip">Hip-Hop</span><span class="chip">Open
+                                Format</span><span class="chip b">Hip-Hop dance</span><span
+                                class="chip b">Freestyle</span><span class="chip b">Choreography</span></div>
+                    </div>
+                    <div class="reveal">
+                        <h2 class="font-display font-extrabold text-2xl">Career highlights</h2>
+                        <div class="mt-4 grid grid-cols-3 gap-4 text-center">
+                            <div class="card p-5">
+                                <p class="font-display font-extrabold text-3xl grad-text">100+</p>
+                                <p class="text-xs opacity-75 mt-1">Live sets</p>
+                            </div>
+                            <div class="card p-5">
+                                <p class="font-display font-extrabold text-3xl grad-text">10+</p>
+                                <p class="text-xs opacity-75 mt-1">Years dancing</p>
+                            </div>
+                            <div class="card p-5">
+                                <p class="font-display font-extrabold text-3xl grad-text">50+</p>
+                                <p class="text-xs opacity-75 mt-1">Events headlined</p>
+                            </div>
+                        </div>
+                        <ul class="mt-5 space-y-2 text-sm opacity-85 list-disc pl-5 marker:text-violet">
+                            <li>Headlined club nights and private events</li>
+                            <li>Performed on festival and show stages</li>
+                            <li>Add awards and press features here</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20">
+            <div class="max-w-4xl mx-auto px-5 text-center reveal">
+                <h2 class="font-display font-extrabold text-3xl sm:text-5xl">Your event needs <span class="grad-text">a
+                        moment</span></h2>
+                <p class="mt-4 opacity-75">DJ set, dance act, or both. Tell Rocco the date.</p><a href="contact.html"
+                    class="grad-btn inline-block mt-8 px-9 py-4">Book Rocco</a>
+            </div>
+        </section>
+    </main>
+    <footer class="relative z-10 border-t border-violet/20 py-10 mt-10">
+        <div class="max-w-6xl mx-auto px-5 flex flex-col sm:flex-row gap-4 justify-between items-center text-sm">
+            <p class="opacity-75">© <span id="yr"></span> Rocco. DJ and dancer.</p>
+            <div class="flex gap-5 font-bold"><a class="hover:text-violet" href="https://instagram.com/" target="_blank"
+                    rel="noopener">Instagram</a><a class="hover:text-electric" href="https://facebook.com/"
+                    target="_blank" rel="noopener">Facebook</a><a class="hover:text-violet" href="https://tiktok.com/"
+                    target="_blank" rel="noopener">TikTok</a></div>
+        </div>
+    </footer>
+    <div id="lb" class="hidden fixed inset-0 z-[60] bg-black/90 grid place-items-center p-4"><button
+            class="absolute top-4 right-4 text-white text-3xl" aria-label="Close image">×</button><img id="lbImg" alt=""
+            class="max-h-[90vh] max-w-full rounded-xl"></div>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contact | Rocco DJ & Dancer</title>
+    <meta name="description" content="Book Rocco for your event.">
+    <link rel="icon" href="images/logo1.png">
+    <script>try { document.documentElement.classList.toggle('dark', (localStorage.theme || 'dark') === 'dark') } catch (e) { }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tw.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body data-page="contact"
+    class="bg-[#f5f3ff] text-[#1a1240] dark:bg-ink dark:text-[#ece9ff] transition-colors duration-300 overflow-x-hidden">
+    <div id="cursor"></div>
+    <header
+        class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[#f5f3ff]/80 dark:bg-ink/80 border-b border-violet/20">
+        <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3"><img src="images/logo1.png" alt="Rocco logo"
+                    class="h-9 w-auto"><span class="font-display font-extrabold"></span></a>
+            <ul class="hidden md:flex items-center gap-8 text-sm font-bold">
+                <li><a data-nav="home" class="hover:text-violet" href="index.html">Home</a></li>
+                <li><a data-nav="about" class="hover:text-violet" href="about.html">About</a></li>
+                <li><a data-nav="performance" class="hover:text-violet" href="performance.html">Performance</a></li>
+                <li><a data-nav="events" class="hover:text-violet" href="events.html">Events</a></li>
+                <li><a data-nav="contact" class="hover:text-violet" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="flex items-center gap-2"><button id="theme" aria-label="Switch dark or light mode"
+                    class="w-10 h-10 rounded-full border border-violet/40 hover:bg-violet/10"><span
+                        id="themeIcon">☾</span></button>
+                <a href="contact.html" class="hidden sm:inline-block grad-btn text-sm px-5 py-2.5">Book Rocco</a>
+                <button id="burger" aria-label="Open menu"
+                    class="md:hidden w-10 h-10 rounded-full border border-violet/40">☰</button>
+            </div>
+        </nav>
+        <ul id="mobileMenu" class="hidden md:hidden px-5 pb-4 space-y-3 font-bold">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="performance.html">Performance</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <main class="relative z-10">
+        <section class="relative pt-36 pb-12 overflow-hidden">
+            <div class="blob w-80 h-80 bg-violet/30 -top-10 -left-10"></div>
+            <div class="blob w-72 h-72 bg-electric/30 top-10 right-0"></div>
+            <div class="relative max-w-6xl mx-auto px-5">
+                <h1 class="font-display font-extrabold text-4xl sm:text-6xl reveal"><span class="grad-text">Book
+                        Rocco</span></h1>
+                <p class="mt-4 opacity-75 max-w-xl reveal">Tell me about your event and I will reply with availability
+                    and a quote.</p>
+            </div>
+        </section>
+        <section class="py-10">
+            <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-12">
+                <div class="reveal">
+                    <ul class="space-y-4">
+                        <li class="card p-5">
+                            <p class="text-sm opacity-70">Email</p><a class="font-bold text-violet hover:underline"
+                                href="mailto:booking@example.com">booking@example.com</a>
+                        </li>
+                        <li class="card p-5">
+                            <p class="text-sm opacity-70">Phone</p><a class="font-bold text-violet hover:underline"
+                                href="tel:+0000000000">+00 000 000 000</a>
+                        </li>
+                        <li class="card p-5">
+                            <p class="text-sm opacity-70 mb-3">Social media</p>
+                            <div class="flex gap-3 text-sm font-bold"><a href="https://instagram.com/" target="_blank"
+                                    rel="noopener" class="ghost px-4 py-2">Instagram</a><a href="https://facebook.com/"
+                                    target="_blank" rel="noopener" class="ghost px-4 py-2">Facebook</a><a
+                                    href="https://tiktok.com/" target="_blank" rel="noopener"
+                                    class="ghost px-4 py-2">TikTok</a></div>
+                        </li>
+                    </ul>
+                </div>
+                <form id="booking" class="card p-6 sm:p-8 space-y-4 reveal hover:!transform-none">
+                    <label class="block text-sm font-bold">Your name<input name="name" required class="inp"></label>
+                    <label class="block text-sm font-bold">Email<input name="email" type="email" required
+                            class="inp"></label>
+                    <div class="grid sm:grid-cols-2 gap-4"><label class="block text-sm font-bold">Event date<input
+                                name="date" type="date" class="inp"></label>
+                        <label class="block text-sm font-bold">I need<select name="service" class="inp">
+                                <option class="text-black">DJ set</option>
+                                <option class="text-black">Dance performance</option>
+                                <option class="text-black">DJ and dance</option>
+                            </select></label>
+                    </div>
+                    <label class="block text-sm font-bold">Event details<textarea name="message" rows="4" required
+                            class="inp"></textarea></label>
+                    <button class="grad-btn w-full py-4">Send booking request</button>
+                    <p id="formNote" class="text-sm text-center opacity-80" aria-live="polite"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="relative z-10 border-t border-violet/20 py-10 mt-10">
+        <div class="max-w-6xl mx-auto px-5 flex flex-col sm:flex-row gap-4 justify-between items-center text-sm">
+            <p class="opacity-75">© <span id="yr"></span> Rocco. DJ and dancer.</p>
+            <div class="flex gap-5 font-bold"><a class="hover:text-violet" href="https://instagram.com/" target="_blank"
+                    rel="noopener">Instagram</a><a class="hover:text-electric" href="https://facebook.com/"
+                    target="_blank" rel="noopener">Facebook</a><a class="hover:text-violet" href="https://tiktok.com/"
+                    target="_blank" rel="noopener">TikTok</a></div>
+        </div>
+    </footer>
+    <div id="lb" class="hidden fixed inset-0 z-[60] bg-black/90 grid place-items-center p-4"><button
+            class="absolute top-4 right-4 text-white text-3xl" aria-label="Close image">×</button><img id="lbImg" alt=""
+            class="max-h-[90vh] max-w-full rounded-xl"></div>
+</body>
+
+</html>

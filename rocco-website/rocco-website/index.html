@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home | Rocco DJ & Dancer</title>
+    <meta name="description" content="Rocco is a DJ and dancer. Watch, listen and book.">
+    <link rel="icon" href="images/logo1.png">
+    <script>try { document.documentElement.classList.toggle('dark', (localStorage.theme || 'dark') === 'dark') } catch (e) { }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tw.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body data-page="home"
+    class="bg-[#f5f3ff] text-[#1a1240] dark:bg-ink dark:text-[#ece9ff] transition-colors duration-300 overflow-x-hidden">
+    <div id="cursor"></div>
+    <header
+        class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[#f5f3ff]/80 dark:bg-ink/80 border-b border-violet/20">
+        <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="images/logo1.png" alt="Rocco logo" class="site-logo h-8 w-auto">
+                <span class="font-display font-extrabold"></span>
+            </a>
+            <ul class="hidden md:flex items-center gap-8 text-sm font-bold">
+                <li><a data-nav="home" class="hover:text-violet" href="index.html">Home</a></li>
+                <li><a data-nav="about" class="hover:text-violet" href="about.html">About</a></li>
+                <li><a data-nav="performance" class="hover:text-violet" href="performance.html">Performance</a></li>
+                <li><a data-nav="events" class="hover:text-violet" href="events.html">Events</a></li>
+                <li><a data-nav="contact" class="hover:text-violet" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="flex items-center gap-2"><button id="theme" aria-label="Switch dark or light mode"
+                    class="w-10 h-10 rounded-full border border-violet/40 hover:bg-violet/10"><span
+                        id="themeIcon">☾</span></button>
+                <a href="contact.html" class="hidden sm:inline-block grad-btn text-sm px-5 py-2.5">Book Rocco</a>
+                <button id="burger" aria-label="Open menu"
+                    class="md:hidden w-10 h-10 rounded-full border border-violet/40">☰</button>
+            </div>
+        </nav>
+        <ul id="mobileMenu" class="hidden md:hidden px-5 pb-4 space-y-3 font-bold">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="performance.html">Performance</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <main class="relative z-10">
+        <section class="relative pt-24 pb-16 overflow-hidden min-h-screen flex items-center">
+            <div class="blob w-96 h-96 bg-violet/35 -top-20 -left-20"></div>
+            <div class="blob w-96 h-96 bg-electric/30 bottom-0 -right-20"></div>
+            <div class="relative max-w-6xl mx-auto px-5 grid md:grid-cols-2 gap-10 items-center w-full">
+                <div class="order-1 md:order-2 flex justify-center reveal">
+                    <div class="relative">
+                        <div class="absolute -inset-6 rounded-full border border-dashed border-violet/40 spin"></div>
+                        <div
+                            class="relative w-[250px] sm:w-[300px] aspect-[9/16] rounded-[2rem] overflow-hidden glow border border-violet/40">
+                            <video id="heroVideo" class="w-full h-full object-cover" src="video/v1.mp4"
+                                 autoplay muted loop playsinline preload="auto"></video>
+                            <button id="mute"
+                                class="absolute bottom-3 right-3 w-10 h-10 rounded-full bg-black/55 text-white backdrop-blur"
+                                aria-label="Turn sound on or off">🔇</button>
+                            <div
+                                class="absolute top-3 left-3 flex items-center gap-2 bg-black/55 text-white text-xs px-3 py-1.5 rounded-full backdrop-blur">
+                                <span class="eq"><span></span><span></span><span></span><span></span></span> Live set
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-2 md:order-1 text-center md:text-left">
+                    <p class="text-sm font-bold text-violet mb-4 reveal">DJ and dancer</p>
+                    <h1 class="font-display font-extrabold text-7xl sm:text-6xl lg:text-8xl leading-none tracking-tight"
+                        aria-label="Rocco"><span id="letters" aria-hidden="true">ROCCO</span></h1>
+                    <p class="mt-6 text-lg max-w-md mx-auto md:mx-0 opacity-80 reveal">I move the crowd twice: with the
+                        beat I mix, then with the steps I dance. Clubs, festivals, private parties and stages.</p>
+                    <div class="mt-8 flex flex-wrap gap-3 justify-center md:justify-start reveal"><a href="contact.html"
+                            class="grad-btn px-8 py-4">Book Rocco</a><a href="performance.html"
+                            class="ghost px-8 py-4">Listen and watch</a></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <div class="max-w-6xl mx-auto px-5 grid sm:grid-cols-3 gap-5">
+                <a href="performance.html" class="card p-6 reveal block">
+                    <p class="text-3xl">🎧</p>
+                    <h3 class="font-display font-extrabold mt-4">Latest mix</h3>
+                    <p class="text-sm opacity-75 mt-2">Stream Rocco's newest DJ set on SoundCloud and YouTube.</p>
+                </a>
+                <a href="performance.html" class="card p-6 reveal block">
+                    <p class="text-3xl">🕺</p>
+                    <h3 class="font-display font-extrabold mt-4">Dance reel</h3>
+                    <p class="text-sm opacity-75 mt-2">Watch stage routines and freestyle clips.</p>
+                </a>
+                <a href="events.html" class="card p-6 reveal block">
+                    <p class="text-3xl">🎟</p>
+                    <h3 class="font-display font-extrabold mt-4">Next show</h3>
+                    <p class="text-sm opacity-75 mt-2">See upcoming dates and photos from past nights.</p>
+                </a>
+            </div>
+        </section>
+        <section class="pb-20">
+            <div class="max-w-6xl mx-auto px-5 grid md:grid-cols-5 gap-10 items-center">
+                <div class="md:col-span-2 reveal">
+                    <div class="gw glow"><img src="images/r2.jpg" alt="Rocco portrait"
+                            class="g w-full aspect-[4/5] object-cover" loading="lazy"></div>
+                </div>
+                <div class="md:col-span-3 reveal">
+                    <h2 class="font-display font-extrabold text-3xl sm:text-4xl">Behind the decks, <span
+                            class="grad-text">on the floor</span></h2>
+                    <p class="mt-5 opacity-80 max-w-xl">Rocco started as a dancer and picked up the decks to control the
+                        energy he used to follow. Now he reads the room as a DJ and gives it something to watch as a
+                        dancer.</p>
+                    <a href="about.html" class="ghost inline-block mt-6 px-7 py-3">Read Rocco's story</a>
+                </div>
+            </div>
+        </section>
+        <section class="pb-20">
+            <div class="max-w-6xl mx-auto px-5">
+                <div class="flex items-end justify-between mb-6 reveal">
+                    <h2 class="font-display font-extrabold text-3xl">From the stage</h2>
+                    <a href="events.html" class="text-violet font-bold text-sm hover:underline">Full gallery</a>
+                </div>
+
+                <!-- PC: Grid view (md:grid) / Mobile: Single photo carousel wrapper with arrows -->
+                <div class="relative">
+                    <!-- Left / Right Arrow Buttons (Mobile Only) -->
+                    <button id="prevBtn" type="button" aria-label="Previous slide"
+                        class="absolute left-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center backdrop-blur hover:bg-black/80 transition-colors md:hidden text-lg">‹</button>
+                    <button id="nextBtn" type="button" aria-label="Next slide"
+                        class="absolute right-2 top-1/2 -translate-y-1/2 z-20 w-10 h-10 rounded-full bg-black/60 text-white flex items-center justify-center backdrop-blur hover:bg-black/80 transition-colors md:hidden text-lg">›</button>
+
+                    <!-- Slides Gallery -->
+                    <div id="stageGallery" class="grid md:grid-cols-5 gap-4">
+                        <div class="stage-slide gw w-full reveal block md:block"><img src="images/r1.jpg"
+                                alt="Rocco live, photo 1" class="g w-full aspect-[3/4] object-cover" loading="lazy">
+                        </div>
+                        <div class="stage-slide gw w-full reveal hidden md:block"><img src="images/r2.jpg"
+                                alt="Rocco live, photo 2" class="g w-full aspect-[3/4] object-cover" loading="lazy">
+                        </div>
+                        <div class="stage-slide gw w-full reveal hidden md:block"><img src="images/r3.jpg"
+                                alt="Rocco live, photo 3" class="g w-full aspect-[3/4] object-cover" loading="lazy">
+                        </div>
+                        <div class="stage-slide gw w-full reveal hidden md:block"><img src="images/r4.jpg"
+                                alt="Rocco live, photo 4" class="g w-full aspect-[3/4] object-cover" loading="lazy">
+                        </div>
+                        <div class="stage-slide gw w-full reveal hidden md:block"><img src="images/r5.jpg"
+                                alt="Rocco live, photo 5" class="g w-full aspect-[3/4] object-cover" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Radio-point indicators (Visible ONLY on mobile) -->
+                <div id="carouselDots" class="flex justify-center gap-2 mt-4 md:hidden">
+                    <button type="button" aria-label="Slide 1"
+                        class="w-3 h-3 rounded-full bg-violet/40 transition-colors active-dot" data-index="0"></button>
+                    <button type="button" aria-label="Slide 2"
+                        class="w-3 h-3 rounded-full bg-violet/40 transition-colors" data-index="1"></button>
+                    <button type="button" aria-label="Slide 3"
+                        class="w-3 h-3 rounded-full bg-violet/40 transition-colors" data-index="2"></button>
+                    <button type="button" aria-label="Slide 4"
+                        class="w-3 h-3 rounded-full bg-violet/40 transition-colors" data-index="3"></button>
+                    <button type="button" aria-label="Slide 5"
+                        class="w-3 h-3 rounded-full bg-violet/40 transition-colors" data-index="4"></button>
+                </div>
+            </div>
+        </section>
+
+        <style>
+            /* Active radio point dot style */
+            #carouselDots button.active-dot {
+                background-color: #8b5cf6 !important;
+                transform: scale(1.2);
+            }
+        </style>
+
+        <script>
+            const slides = document.querySelectorAll('.stage-slide');
+            const dots = document.querySelectorAll('#carouselDots button');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentIndex = 0;
+            let slideInterval = null;
+
+            function showSlide(index) {
+                if (window.innerWidth >= 768) return; // Keep grid layout on PC
+
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.remove('hidden');
+                        slide.classList.add('block');
+                    } else {
+                        slide.classList.remove('block');
+                        slide.classList.add('hidden');
+                    }
+                });
+
+                dots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.add('active-dot');
+                    } else {
+                        dot.classList.remove('active-dot');
+                    }
+                });
+
+                currentIndex = index;
+            }
+
+            function nextSlide() {
+                let nextIndex = (currentIndex + 1) % slides.length;
+                showSlide(nextIndex);
+            }
+
+            function prevSlide() {
+                let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+                showSlide(prevIndex);
+            }
+
+            function startAutoplay() {
+                if (window.innerWidth < 768 && !slideInterval) {
+                    slideInterval = setInterval(nextSlide, 5000); // 5 seconds autoplay
+                }
+            }
+
+            function stopAutoplay() {
+                clearInterval(slideInterval);
+                slideInterval = null;
+            }
+
+            // Initialize mobile slider
+            if (window.innerWidth < 768) {
+                showSlide(0);
+                startAutoplay();
+            }
+
+            // Arrow button events
+            if (nextBtn && prevBtn) {
+                nextBtn.addEventListener('click', () => {
+                    stopAutoplay();
+                    nextSlide();
+                    startAutoplay();
+                });
+
+                prevBtn.addEventListener('click', () => {
+                    stopAutoplay();
+                    prevSlide();
+                    startAutoplay();
+                });
+            }
+
+            // Clickable dot events
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    stopAutoplay();
+                    showSlide(index);
+                    startAutoplay();
+                });
+            });
+
+            // Pause autoplay on hover/touch
+            const container = document.getElementById('stageGallery');
+            if (container) {
+                container.addEventListener('mouseenter', stopAutoplay);
+                container.addEventListener('mouseleave', startAutoplay);
+                container.addEventListener('touchstart', stopAutoplay, { passive: true });
+            }
+
+            // Adjust on screen resize
+            window.addEventListener('resize', () => {
+                if (window.innerWidth >= 768) {
+                    stopAutoplay();
+                    slides.forEach(slide => {
+                        slide.classList.remove('hidden');
+                        slide.classList.add('block');
+                    });
+                } else {
+                    showSlide(currentIndex);
+                    startAutoplay();
+                }
+            });
+        </script>
+        <section class="py-20">
+            <div class="max-w-4xl mx-auto px-5 text-center reveal">
+                <h2 class="font-display font-extrabold text-3xl sm:text-5xl">Your event needs <span class="grad-text">a
+                        moment</span></h2>
+                <p class="mt-4 opacity-75">DJ set, dance act, or both. Tell Rocco the date.</p><a href="contact.html"
+                    class="grad-btn inline-block mt-8 px-9 py-4">Book Rocco</a>
+            </div>
+        </section>
+    </main>
+    <footer class="relative z-10 border-t border-violet/20 py-10 mt-10">
+        <div class="max-w-6xl mx-auto px-5 flex flex-col sm:flex-row gap-4 justify-between items-center text-sm">
+            <p class="opacity-75">© <span id="yr"></span> Rocco. DJ and dancer.</p>
+            <div class="flex gap-5 font-bold"><a class="hover:text-violet" href="https://instagram.com/" target="_blank"
+                    rel="noopener">Instagram</a><a class="hover:text-electric" href="https://facebook.com/"
+                    target="_blank" rel="noopener">Facebook</a><a class="hover:text-violet" href="https://tiktok.com/"
+                    target="_blank" rel="noopener">TikTok</a></div>
+        </div>
+    </footer>
+    <div id="lb" class="hidden fixed inset-0 z-[60] bg-black/90 grid place-items-center p-4"><button
+            class="absolute top-4 right-4 text-white text-3xl" aria-label="Close image">×</button><img id="lbImg" alt=""
+            class="max-h-[90vh] max-w-full rounded-xl"></div>
+</body>
+
+</html>
