@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Performance | Rocco DJ & Dancer</title>
     <meta name="description" content="Listen to Rocco's DJ mixes and watch dance performances.">
-    <link rel="icon" href="images/logo1.png">
+    <link rel="icon" type="image/svg+xml" href="images/icon.svg" sizes="any">
     <script>try { document.documentElement.classList.toggle('dark', (localStorage.theme || 'dark') === 'dark') } catch (e) { }</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
         class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[#f5f3ff]/80 dark:bg-ink/80 border-b border-violet/20">
         <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3"><img src="images/logo1.png" alt="Rocco logo"
-                    class="h-9 w-auto"><span class="font-display font-extrabold"></span></a>
+                    class="site-logo h-9 w-auto"><span class="font-display font-extrabold"></span></a>
             <ul class="hidden md:flex items-center gap-8 text-sm font-bold">
                 <li><a data-nav="home" class="hover:text-violet" href="index.html">Home</a></li>
                 <li><a data-nav="about" class="hover:text-violet" href="about.html">About</a></li>
@@ -66,31 +66,55 @@
                         class="tab px-7 py-2.5 rounded-full text-sm font-bold tab-on" data-tab="music"
                         role="tab">Music</button><button class="tab px-7 py-2.5 rounded-full text-sm font-bold"
                         data-tab="dance" role="tab">Dance</button></div>
+                
+                <!-- Music Section with .mp3 Audio Player -->
                 <div id="panel-music" class="panel mt-8 grid md:grid-cols-2 gap-6">
-                    <div class="card p-3 reveal"><iframe title="Rocco on SoundCloud" class="w-full rounded-2xl"
-                            height="320" loading="lazy" allow="autoplay"
-                            src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/YOUR-USERNAME&color=%238b5cf6"></iframe>
+                    <div class="card p-6 reveal flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl mb-2">Rocco Live Set (Mix 01)</h3>
+                            <p class="text-sm opacity-75 mb-6">Listen to the latest official studio and live DJ mix stream.</p>
+                        </div>
+                        <div class="w-full bg-violet/10 p-4 rounded-2xl border border-violet/30">
+                            <audio class="w-full" controls preload="none">
+                                <source src="audio/track1.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
                     </div>
-                    <div class="card p-3 reveal"><iframe title="Rocco DJ set on YouTube"
-                            class="w-full aspect-video rounded-2xl" loading="lazy" allowfullscreen
-                            src="https://www.youtube.com/embed/VIDEO_ID"></iframe>
-                        <div class="p-4 flex gap-4 text-sm font-bold"><a href="https://soundcloud.com/YOUR-USERNAME"
-                                target="_blank" rel="noopener" class="text-violet hover:underline">SoundCloud</a><a
-                                href="https://youtube.com/@YOUR-CHANNEL" target="_blank" rel="noopener"
-                                class="text-electric hover:underline">YouTube</a></div>
+                    <div class="card p-6 reveal flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl mb-2">Club Anthem Mix</h3>
+                            <p class="text-sm opacity-75 mb-6">High-energy club beats mixed live by Rocco.</p>
+                        </div>
+                        <div class="w-full bg-violet/10 p-4 rounded-2xl border border-violet/30">
+                            <audio class="w-full" controls preload="none">
+                                <source src="audio/track2.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Dance Section with v1.mp4, v2.mp4, v3.mp4 -->
                 <div id="panel-dance" class="panel hidden mt-8 grid sm:grid-cols-3 gap-6 items-start">
-                    <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30"><video
-                            class="w-full h-full object-cover" src="video/v1.mp4" poster="images/r3.jpg" controls
-                            playsinline preload="none"></video></div>
-                            <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30"><video
-                            class="w-full h-full object-cover" src="video/v1.mp4" poster="images/r3.jpg" controls
-                            playsinline preload="none"></video></div>
-                            <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30"><video
-                            class="w-full h-full object-cover" src="video/v1.mp4" poster="images/r3.jpg" controls
-                            playsinline preload="none"></video></div>
-                    
+                    <div class="reveal">
+                        <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30">
+                            <video class="w-full h-full object-cover" src="video/v1.mp4" poster="images/r1.jpg" controls
+                                playsinline preload="none"></video>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30">
+                            <video class="w-full h-full object-cover" src="video/v2.mp4" poster="images/r2.jpg" controls
+                                playsinline preload="none"></video>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30">
+                            <video class="w-full h-full object-cover" src="video/v3.mp4" poster="images/r3.jpg" controls
+                                playsinline preload="none"></video>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
