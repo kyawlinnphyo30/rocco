@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Events | Rocco DJ & Dancer</title>
     <meta name="description" content="Upcoming events, past nights, posters and live videos.">
-    <link rel="icon" href="images/logo1.png">
+    <link rel="icon" type="image/svg+xml" href="images/icon.svg" sizes="any">
     <script>try { document.documentElement.classList.toggle('dark', (localStorage.theme || 'dark') === 'dark') } catch (e) { }</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +26,7 @@
         class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[#f5f3ff]/80 dark:bg-ink/80 border-b border-violet/20">
         <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
             <a href="index.html" class="flex items-center gap-3"><img src="images/logo1.png" alt="Rocco logo"
-                    class="h-9 w-auto"><span class="font-display font-extrabold"></span></a>
+                    class="site-logo h-9 w-auto"><span class="font-display font-extrabold"></span></a>
             <ul class="hidden md:flex items-center gap-8 text-sm font-bold">
                 <li><a data-nav="home" class="hover:text-violet" href="index.html">Home</a></li>
                 <li><a data-nav="about" class="hover:text-violet" href="about.html">About</a></li>
@@ -62,6 +62,7 @@
         </section>
         <section class="py-10">
             <div class="max-w-6xl mx-auto px-5 grid gap-14">
+                <!-- Upcoming Events Section -->
                 <div>
                     <h2 class="font-display font-extrabold text-2xl mb-5 reveal">Upcoming events</h2>
                     <div class="grid md:grid-cols-2 gap-4">
@@ -81,46 +82,113 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Photos Section (r1 to r12 in 2:3 vertical ratio / aspect-[2/3]) -->
                 <div>
-                    <h2 class="font-display font-extrabold text-2xl mb-5 reveal">Past events</h2>
+                    <h2 class="font-display font-extrabold text-2xl mb-5 reveal">Photos</h2>
                     <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <div class="reveal col-span-2 row-span-2">
-                            <div class="gw h-full"><img src="images/r1.jpg" alt="Rocco live at a past event"
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r1.jpg" alt="Rocco live at a past event"
                                     class="g w-full h-full object-cover" loading="lazy"></div>
                         </div>
                         <div class="reveal">
-                            <div class="gw aspect-square"><img src="images/r2.jpg" alt="Rocco behind the decks"
+                            <div class="gw aspect-[2/3]"><img src="images/r2.jpg" alt="Rocco behind the decks"
                                     class="g w-full h-full object-cover" loading="lazy"></div>
                         </div>
                         <div class="reveal">
-                            <div class="gw aspect-square"><img src="images/r3.jpg" alt="Crowd at a Rocco show"
+                            <div class="gw aspect-[2/3]"><img src="images/r3.jpg" alt="Crowd at a Rocco show"
                                     class="g w-full h-full object-cover" loading="lazy"></div>
                         </div>
                         <div class="reveal">
-                            <div class="gw aspect-square"><img src="images/r4.jpg" alt="Performance moment"
+                            <div class="gw aspect-[2/3]"><img src="images/r4.jpg" alt="Performance moment"
                                     class="g w-full h-full object-cover" loading="lazy"></div>
                         </div>
                         <div class="reveal">
-                            <div class="gw aspect-square"><img src="images/r5.jpg" alt="Stage highlight"
+                            <div class="gw aspect-[2/3]"><img src="images/r5.jpg" alt="Stage highlight"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r6.jpg" alt="Live event energy"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r7.jpg" alt="DJ deck perspective"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r8.jpg" alt="Dancer performance"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r9.jpg" alt="Visual lights setup"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r10.jpg" alt="Club night moment"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r11.jpg" alt="Festival stage crowd"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r12.jpg" alt="Afterparty highlight"
                                     class="g w-full h-full object-cover" loading="lazy"></div>
                         </div>
                     </div>
                 </div>
-                <div class="grid md:grid-cols-3 gap-8 items-start">
-                    <div class="md:col-span-2 reveal">
-                        <h2 class="font-display font-extrabold text-2xl mb-5">Event posters</h2>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div class="gw aspect-[3/4]"><img src="images/r4.jpg" alt="Event poster one"
-                                    class="g w-full h-full object-cover" loading="lazy"></div>
-                            <div class="gw aspect-[3/4]"><img src="images/r5.jpg" alt="Event poster two"
-                                    class="g w-full h-full object-cover" loading="lazy"></div>
+
+                <!-- Event Posters Section -->
+                <div>
+                    <h2 class="font-display font-extrabold text-2xl mb-5 reveal">Event Posters</h2>
+                    <div class="space-y-6">
+                        <!-- e1.jpg (Horizontal 1080x1920 ratio) on Top -->
+                        <div class="reveal">
+                            <div class="gw aspect-[16/9] rounded-2xl overflow-hidden">
+                                <img src="images/e1.jpg" alt="Horizontal event poster"
+                                    class="g w-full h-full object-cover" loading="lazy">
+                            </div>
+                        </div>
+                        <!-- e2.jpg & e3.jpg (Vertical 1080x1350 ratio) below -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="reveal">
+                                <div class="gw aspect-[4/5] rounded-2xl overflow-hidden max-w-md mx-auto">
+                                    <img src="images/e2.jpg" alt="Vertical event poster 1"
+                                        class="g w-full h-full object-cover" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="reveal">
+                                <div class="gw aspect-[4/5] rounded-2xl overflow-hidden max-w-md mx-auto">
+                                    <img src="images/e3.jpg" alt="Vertical event poster 2"
+                                        class="g w-full h-full object-cover" loading="lazy">
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="reveal">
-                        <h2 class="font-display font-extrabold text-2xl mb-5">Live video</h2>
-                        <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30"><video
-                                class="w-full h-full object-cover" src="video/v1.mp4" poster="images/r1.jpg" controls
-                                playsinline preload="none"></video></div>
+                </div>
+
+                <!-- Live Videos (3 Videos: v1.mp4, v2.mp4, v3.mp4) -->
+                <div>
+                    <h2 class="font-display font-extrabold text-2xl mb-5 reveal">Videos</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="reveal">
+                            <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30">
+                                <video class="w-full h-full object-cover" src="video/v1.mp4" poster="images/r1.jpg" controls
+                                    playsinline preload="none"></video>
+                            </div>
+                        </div>
+                        <div class="reveal">
+                            <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30">
+                                <video class="w-full h-full object-cover" src="video/v2.mp4" poster="images/r6.jpg" controls
+                                    playsinline preload="none"></video>
+                            </div>
+                        </div>
+                        <div class="reveal">
+                            <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30">
+                                <video class="w-full h-full object-cover" src="video/v3.mp4" poster="images/r7.jpg" controls
+                                    playsinline preload="none"></video>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
