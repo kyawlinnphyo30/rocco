@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery | Rocco DJ & Dancer</title>
+    <meta name="description" content="Past nights, posters and live videos.">
+    <link rel="icon" type="image/svg+xml" href="images/icon.svg" sizes="any">
+    <script>try { document.documentElement.classList.toggle('dark', (localStorage.theme || 'dark') === 'dark') } catch (e) { }</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tw.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body data-page="events"
+    class="bg-[#f5f3ff] text-[#1a1240] dark:bg-ink dark:text-[#ece9ff] transition-colors duration-300 overflow-x-hidden">
+    <div id="cursor"></div>
+    <header
+        class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[#f5f3ff]/80 dark:bg-ink/80 border-b border-violet/20">
+        <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-3"><img src="images/logo1.png" alt="Rocco logo"
+                    class="site-logo h-9 w-auto"><span class="font-display font-extrabold"></span></a>
+            <ul class="hidden md:flex items-center gap-8 text-sm font-bold">
+                <li><a data-nav="home" class="hover:text-violet" href="index.html">Home</a></li>
+                <li><a data-nav="about" class="hover:text-violet" href="about.html">About</a></li>
+                <li><a data-nav="performance" class="hover:text-violet" href="performance.html">Performance</a></li>
+                <li><a data-nav="events" class="hover:text-violet" href="gallery.html">Gallery</a></li>
+                <li><a data-nav="contact" class="hover:text-violet" href="contact.html">Contact</a></li>
+            </ul>
+            <div class="flex items-center gap-2"><button id="theme" aria-label="Switch dark or light mode"
+                    class="w-10 h-10 rounded-full border border-violet/40 hover:bg-violet/10"><span
+                        id="themeIcon">☾</span></button>
+                <a href="contact.html" class="hidden sm:inline-block grad-btn text-sm px-5 py-2.5">Book Rocco</a>
+                <button id="burger" aria-label="Open menu"
+                    class="md:hidden w-10 h-10 rounded-full border border-violet/40">☰</button>
+            </div>
+        </nav>
+        <ul id="mobileMenu" class="hidden md:hidden px-5 pb-4 space-y-3 font-bold">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="performance.html">Performance</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+    <main class="relative z-10">
+        <section class="relative pt-36 pb-12 overflow-hidden">
+            <div class="blob w-80 h-80 bg-violet/30 -top-10 -left-10"></div>
+            <div class="blob w-72 h-72 bg-electric/30 top-10 right-0"></div>
+            <div class="relative max-w-6xl mx-auto px-5">
+                <h1 class="font-display font-extrabold text-4xl sm:text-6xl reveal"><span class="grad-text">
+                        Gallery</span></h1>
+                <p class="mt-4 opacity-75 max-w-xl reveal">Past nights, posters and live videos.</p>
+            </div>
+        </section>
+        <section class="py-10">
+            <div class="max-w-6xl mx-auto px-5 grid gap-14">
+                <!-- Photos Section (r1 to r12 in 2:3 vertical ratio / aspect-[2/3]) -->
+                <div>
+                    <h2 class="font-display font-extrabold text-2xl mb-5 reveal">Photos</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r1.jpg" alt="Rocco live at a past event"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r2.jpg" alt="Rocco behind the decks"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r3.jpg" alt="Crowd at a Rocco show"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r4.jpg" alt="Performance moment"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r5.jpg" alt="Stage highlight"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r6.jpg" alt="Live event energy"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r7.jpg" alt="DJ deck perspective"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r8.jpg" alt="Dancer performance"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r9.jpg" alt="Visual lights setup"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r10.jpg" alt="Club night moment"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r11.jpg" alt="Festival stage crowd"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                        <div class="reveal">
+                            <div class="gw aspect-[2/3]"><img src="images/r12.jpg" alt="Afterparty highlight"
+                                    class="g w-full h-full object-cover" loading="lazy"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Event Posters Section -->
+                <div>
+                    <h2 class="font-display font-extrabold text-2xl mb-5 reveal">Event Posters</h2>
+                    <div class="space-y-6">
+                        <!-- e1.jpg (Horizontal 1080x1920 ratio) on Top -->
+                        <div class="reveal">
+                            <div class="gw aspect-[16/9] rounded-2xl overflow-hidden">
+                                <img src="images/e1.jpg" alt="Horizontal event poster"
+                                    class="g w-full h-full object-cover" loading="lazy">
+                            </div>
+                        </div>
+                        <!-- e2.jpg & e3.jpg (Vertical 1080x1350 ratio) below -->
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="reveal">
+                                <div class="gw aspect-[4/5] rounded-2xl overflow-hidden max-w-md mx-auto">
+                                    <img src="images/e2.jpg" alt="Vertical event poster 1"
+                                        class="g w-full h-full object-cover" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="reveal">
+                                <div class="gw aspect-[4/5] rounded-2xl overflow-hidden max-w-md mx-auto">
+                                    <img src="images/e3.jpg" alt="Vertical event poster 2"
+                                        class="g w-full h-full object-cover" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Videos (3 Videos: v1.mp4, v2.mp4, v3.mp4) -->
+                <div>
+                    <h2 class="font-display font-extrabold text-2xl mb-5 reveal">Videos</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="reveal">
+                            <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30">
+                                <video class="w-full h-full object-cover" src="video/v1.mp4" poster="images/r1.jpg" controls
+                                    playsinline preload="none"></video>
+                            </div>
+                        </div>
+                        <div class="reveal">
+                            <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30">
+                                <video class="w-full h-full object-cover" src="video/v2.mp4" poster="images/r6.jpg" controls
+                                    playsinline preload="none"></video>
+                            </div>
+                        </div>
+                        <div class="reveal">
+                            <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30">
+                                <video class="w-full h-full object-cover" src="video/v3.mp4" poster="images/r7.jpg" controls
+                                    playsinline preload="none"></video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20">
+            <div class="max-w-4xl mx-auto px-5 text-center reveal">
+                <h2 class="font-display font-extrabold text-3xl sm:text-5xl">Your event needs <span class="grad-text">a
+                        moment</span></h2>
+                <p class="mt-4 opacity-75">DJ set, dance act, or both. Tell Rocco the date.</p><a href="contact.html"
+                    class="grad-btn inline-block mt-8 px-9 py-4">Book Rocco</a>
+            </div>
+        </section>
+    </main>
+    <footer class="relative z-10 border-t border-violet/20 py-10 mt-10">
+        <div class="max-w-6xl mx-auto px-5 flex flex-col sm:flex-row gap-4 justify-between items-center text-sm">
+            <p class="opacity-75">© <span id="yr"></span> Rocco. DJ and dancer.</p>
+            <div class="flex gap-5 font-bold"><a class="hover:text-violet" href="https://instagram.com/" target="_blank"
+                    rel="noopener">Instagram</a><a class="hover:text-electric" href="https://facebook.com/"
+                    target="_blank" rel="noopener">Facebook</a><a class="hover:text-violet" href="https://tiktok.com/"
+                    target="_blank" rel="noopener">TikTok</a></div>
+        </div>
+    </footer>
+    <div id="lb" class="hidden fixed inset-0 z-[60] bg-black/90 grid place-items-center p-4"><button
+            class="absolute top-4 right-4 text-white text-3xl" aria-label="Close image">×</button><img id="lbImg" alt=""
+            class="max-h-[90vh] max-w-full rounded-xl"></div>
+</body>
+
+</html>
