@@ -31,7 +31,7 @@
                 <li><a data-nav="home" class="hover:text-violet" href="index.html">Home</a></li>
                 <li><a data-nav="about" class="hover:text-violet" href="about.html">About</a></li>
                 <li><a data-nav="performance" class="hover:text-violet" href="performance.html">Performance</a></li>
-                <li><a data-nav="events" class="hover:text-violet" href="events.html">Events</a></li>
+                <li><a data-nav="events" class="hover:text-violet" href="gallery.html">Gallery</a></li>
                 <li><a data-nav="contact" class="hover:text-violet" href="contact.html">Contact</a></li>
             </ul>
             <div class="flex items-center gap-2"><button id="theme" aria-label="Switch dark or light mode"
@@ -46,7 +46,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="performance.html">Performance</a></li>
-            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </header>
@@ -99,7 +99,7 @@
                     </div>
                     <label class="block text-sm font-bold">Event details<textarea name="message" rows="4" required
                             class="inp"></textarea></label>
-                    <button class="grad-btn w-full py-4">Send booking request</button>
+                    <button type="submit" class="grad-btn w-full py-4">Send booking request</button>
                     <p id="formNote" class="text-sm text-center opacity-80" aria-live="polite"></p>
                 </form>
             </div>
@@ -116,6 +116,32 @@
     <div id="lb" class="hidden fixed inset-0 z-[60] bg-black/90 grid place-items-center p-4"><button
             class="absolute top-4 right-4 text-white text-3xl" aria-label="Close image">×</button><img id="lbImg" alt=""
             class="max-h-[90vh] max-w-full rounded-xl"></div>
+
+    <script>
+        document.getElementById('booking').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = encodeURIComponent(this.name.value);
+            const email = encodeURIComponent(this.email.value);
+            const date = encodeURIComponent(this.date.value);
+            const service = encodeURIComponent(this.service.value);
+            const message = encodeURIComponent(this.message.value);
+
+            const subject = encodeURIComponent(`Booking Request from ${decodeURIComponent(name)} - ${decodeURIComponent(service)}`);
+            const body = encodeURIComponent(
+                `Name: ${decodeURIComponent(name)}\n` +
+                `Email: ${decodeURIComponent(email)}\n` +
+                `Event Date: ${decodeURIComponent(date)}\n` +
+                `Service Required: ${decodeURIComponent(service)}\n\n` +
+                `Event Details:\n${decodeURIComponent(message)}`
+            );
+
+            // Opens Gmail web client pre-filled with recipient, subject, and body
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=rocccodancefitness@gmail.com&su=${subject}&body=${body}`;
+            
+            window.open(gmailUrl, '_blank');
+        });
+    </script>
 </body>
 
 </html>
