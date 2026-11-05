@@ -1,73 +1,62 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
+with open("performance.html", "r", encoding="utf-8") as f:
+    code = f.read()
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Performance | Rocco DJ & Dancer</title>
-    <meta name="description" content="Listen to Rocco's DJ mixes and watch dance performances.">
-    <link rel="icon" type="image/svg+xml" href="images/icon.svg" sizes="any">
-    <script>try { document.documentElement.classList.toggle('dark', (localStorage.theme || 'dark') === 'dark') } catch (e) { }</script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Manrope:wght@400;500;700&display=swap"
-        rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="js/tw.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js" defer></script>
-</head>
+# 1. Hide the music tab and music panel by commenting them out, but keep code intact.
+# Specifically, comment out the music tab button:
+# <button class="tab px-7 py-2.5 rounded-full text-sm font-bold tab-on" data-tab="music" role="tab">Music</button>
+# And set dance tab to active by default since music is hidden.
+# Also comment out the #panel-music div.
+# And remove v1.mp4 (comment it out or remove it? The prompt says "remove v1.mp4" and "hide music part by commenting the existing code, DO NOT DELETE the code"). Let's comment out or hide v1.mp4 card.
 
-<body data-page="performance"
-    class="bg-[#f5f3ff] text-[#1a1240] dark:bg-ink dark:text-[#ece9ff] transition-colors duration-300 overflow-x-hidden">
-    <div id="cursor"></div>
-    <header
-        class="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[#f5f3ff]/80 dark:bg-ink/80 border-b border-violet/20">
-        <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
-            <a href="index.html" class="flex items-center gap-3"><img src="images/logo1.png" alt="Rocco logo"
-                    class="site-logo h-9 w-auto"><span class="font-display font-extrabold"></span></a>
-            <ul class="hidden md:flex items-center gap-8 text-sm font-bold">
-                <li><a data-nav="home" class="hover:text-violet" href="index.html">Home</a></li>
-                <li><a data-nav="about" class="hover:text-violet" href="about.html">About</a></li>
-                <li><a data-nav="performance" class="hover:text-violet" href="performance.html">Performance</a></li>
-                <li><a data-nav="events" class="hover:text-violet" href="gallery.html">Gallery</a></li>
-                <li><a data-nav="contact" class="hover:text-violet" href="contact.html">Contact</a></li>
-            </ul>
-            <div class="flex items-center gap-2"><button id="theme" aria-label="Switch dark or light mode"
-                    class="w-10 h-10 rounded-full border border-violet/40 hover:bg-violet/10"><span
-                        id="themeIcon">☾</span></button>
-                <a href="contact.html" class="hidden sm:inline-block grad-btn text-sm px-5 py-2.5">Book Rocco</a>
-                <button id="burger" aria-label="Open menu"
-                    class="md:hidden w-10 h-10 rounded-full border border-violet/40">☰</button>
-            </div>
-        </nav>
-        <ul id="mobileMenu" class="hidden md:hidden px-5 pb-4 space-y-3 font-bold">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="performance.html">Performance</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </header>
-    <main class="relative z-10">
-        <section class="relative pt-36 pb-12 overflow-hidden">
-            <div class="blob w-80 h-80 bg-violet/30 -top-10 -left-10"></div>
-            <div class="blob w-72 h-72 bg-electric/30 top-10 right-0"></div>
-            <div class="relative max-w-6xl mx-auto px-5">
-                <h1 class="font-display font-extrabold text-4xl sm:text-6xl reveal"><span
-                        class="grad-text">Performance</span></h1>
-                <p class="mt-4 opacity-75 max-w-xl reveal">Press play on the music, or watch the dance.</p>
-            </div>
-        </section>
-        <section class="py-10">
-            <div class="max-w-6xl mx-auto px-5">
-                <div class="inline-flex p-1 rounded-full border border-violet/30 reveal" role="tablist"><button
+# Let's inspect original music tab button and dance tab button:
+# <div class="inline-flex p-1 rounded-full border border-violet/30 reveal" role="tablist"><button
+#         class="tab px-7 py-2.5 rounded-full text-sm font-bold tab-on" data-tab="music"
+#         role="tab">Music</button><button class="tab px-7 py-2.5 rounded-full text-sm font-bold"
+#         data-tab="dance" role="tab">Dance</button></div>
+
+old_tabs = '''<div class="inline-flex p-1 rounded-full border border-violet/30 reveal" role="tablist"><button
                         class="tab px-7 py-2.5 rounded-full text-sm font-bold tab-on" data-tab="music"
                         role="tab">Music</button><button class="tab px-7 py-2.5 rounded-full text-sm font-bold"
-                        data-tab="dance" role="tab">Dance</button></div>
-                
-                <!-- Music Section with .mp3 Audio Player -->
+                        data-tab="dance" role="tab">Dance</button></div>'''
+
+new_tabs = '''<div class="inline-flex p-1 rounded-full border border-violet/30 reveal" role="tablist"><!-- <button
+                        class="tab px-7 py-2.5 rounded-full text-sm font-bold tab-on" data-tab="music"
+                        role="tab">Music</button> --><button class="tab px-7 py-2.5 rounded-full text-sm font-bold tab-on"
+                        data-tab="dance" role="tab">Dance</button></div>'''
+
+code = code.replace(old_tabs, new_tabs)
+
+# Comment out panel-music
+old_music_panel = '''<!-- Music Section with .mp3 Audio Player -->
+                <div id="panel-music" class="panel mt-8 grid md:grid-cols-2 gap-6">
+                    <div class="card p-6 reveal flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl mb-2">Rocco Live Set (Mix 01)</h3>
+                            <p class="text-sm opacity-75 mb-6">Listen to the latest official studio and live DJ mix stream.</p>
+                        </div>
+                        <div class="w-full bg-violet/10 p-4 rounded-2xl border border-violet/30">
+                            <audio class="w-full" controls preload="none">
+                                <source src="audio/track1.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                    <div class="card p-6 reveal flex flex-col justify-between">
+                        <div>
+                            <h3 class="font-display font-extrabold text-xl mb-2">Club Anthem Mix</h3>
+                            <p class="text-sm opacity-75 mb-6">High-energy club beats mixed live by Rocco.</p>
+                        </div>
+                        <div class="w-full bg-violet/10 p-4 rounded-2xl border border-violet/30">
+                            <audio class="w-full" controls preload="none">
+                                <source src="audio/track2.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                        </div>
+                    </div>
+                </div>'''
+
+new_music_panel = '''<!-- Music Section with .mp3 Audio Player (Hidden) -->
+                <!--
                 <div id="panel-music" class="panel mt-8 grid md:grid-cols-2 gap-6">
                     <div class="card p-6 reveal flex flex-col justify-between">
                         <div>
@@ -94,51 +83,34 @@
                         </div>
                     </div>
                 </div>
+                -->'''
 
-                <!-- Dance Section with v1.mp4, v2.mp4, v3.mp4 -->
-                <div id="panel-dance" class="panel hidden mt-8 grid sm:grid-cols-3 gap-6 items-start">
+code = code.replace(old_music_panel, new_music_panel)
+
+# Make sure panel-dance doesn't have 'hidden' class initially since music tab is hidden and dance is active
+code = code.replace('id="panel-dance" class="panel hidden mt-8 grid sm:grid-cols-3 gap-6 items-start">', 'id="panel-dance" class="panel mt-8 grid sm:grid-cols-3 gap-6 items-start">')
+
+# Remove v1.mp4 (the first card in dance section)
+old_v1 = '''<div class="reveal">
+                        <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30">
+                            <video class="w-full h-full object-cover" src="video/v1.mp4" poster="images/r1.jpg" controls
+                                playsinline preload="none"></video>
+                        </div>
+                    </div>'''
+
+new_v1 = '''<!-- v1.mp4 removed/commented -->
+                    <!--
                     <div class="reveal">
                         <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30">
                             <video class="w-full h-full object-cover" src="video/v1.mp4" poster="images/r1.jpg" controls
                                 playsinline preload="none"></video>
                         </div>
                     </div>
-                    <div class="reveal">
-                        <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30">
-                            <video class="w-full h-full object-cover" src="video/v2.mp4" poster="images/r2.jpg" controls
-                                playsinline preload="none"></video>
-                        </div>
-                    </div>
-                    <div class="reveal">
-                        <div class="aspect-[9/16] rounded-3xl overflow-hidden glow border border-violet/30">
-                            <video class="w-full h-full object-cover" src="video/v3.mp4" poster="images/r3.jpg" controls
-                                playsinline preload="none"></video>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-20">
-            <div class="max-w-4xl mx-auto px-5 text-center reveal">
-                <h2 class="font-display font-extrabold text-3xl sm:text-5xl">Your event needs <span class="grad-text">a
-                        moment</span></h2>
-                <p class="mt-4 opacity-75">DJ set, dance act, or both. Tell Rocco the date.</p><a href="contact.html"
-                    class="grad-btn inline-block mt-8 px-9 py-4">Book Rocco</a>
-            </div>
-        </section>
-    </main>
-    <footer class="relative z-10 border-t border-violet/20 py-10 mt-10">
-        <div class="max-w-6xl mx-auto px-5 flex flex-col sm:flex-row gap-4 justify-between items-center text-sm">
-            <p class="opacity-75">© <span id="yr"></span> Rocco. DJ and dancer.</p>
-            <div class="flex gap-5 font-bold"><a class="hover:text-violet" href="https://instagram.com/" target="_blank"
-                    rel="noopener">Instagram</a><a class="hover:text-electric" href="https://facebook.com/"
-                    target="_blank" rel="noopener">Facebook</a><a class="hover:text-violet" href="https://tiktok.com/"
-                    target="_blank" rel="noopener">TikTok</a></div>
-        </div>
-    </footer>
-    <div id="lb" class="hidden fixed inset-0 z-[60] bg-black/90 grid place-items-center p-4"><button
-            class="absolute top-4 right-4 text-white text-3xl" aria-label="Close image">×</button><img id="lbImg" alt=""
-            class="max-h-[90vh] max-w-full rounded-xl"></div>
-</body>
+                    -->'''
 
-</html>
+code = code.replace(old_v1, new_v1)
+
+with open("performance.html", "w", encoding="utf-8") as f:
+    f.write(code)
+
+print("performance.html updated successfully.")
