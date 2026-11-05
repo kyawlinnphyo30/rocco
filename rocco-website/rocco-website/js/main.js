@@ -36,7 +36,7 @@ window.addEventListener("load", async () => {
     v.muted = true;
     v.playsInline = true;
     v.loop = true;
-    v.src = "./video/v1.mp4";
+    v.src = "./video/v2.mp4";
 
     // Update mute button icon
     const updateMuteButton = () => {
